@@ -77,7 +77,7 @@ char	*hundreds(char	digit, pair **double_array)
 		j++;
 	}
 	int x = ft_len(array[i].value) + ft_len(array[j].value) + 2;
-	printf("len %d \n", x );
+	//printf("len %d \n", x );
 	result = malloc((ft_len(array[i].value) + ft_len(array[j].value) + 2) * sizeof(char));
 	ft_strcat(result, array[i].value);
 	ft_strcat(result, array[j].value);

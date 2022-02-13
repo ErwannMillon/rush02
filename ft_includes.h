@@ -13,6 +13,7 @@ typedef struct	pair{
 
 }				pair;
 
+void 	ft_loop(char *str, pair **double_array);
 char	*ones(char digit, pair **double_array);
 int		ft_strcmp(char *s1, char *s2);
 char	*tens(char digit, char teens, pair **double_array);

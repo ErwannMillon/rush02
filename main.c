@@ -17,9 +17,9 @@ int main(void)
 		//printf("Key: %s, Value: %s, Power: %d \n", array[i].key, array[i].value, array[i].power);
 		i++;
 	}
-	hundreds('5', &array);
-	tens('1', '6', &array);
-	//ones('9', &array);
-
+	//  hundreds('5', &array);
+	//  tens('1', '6', &array);
+	// ones('9', &array);
+	ft_loop("128345", reference);
 	return(0);
 }
