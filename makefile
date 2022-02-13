@@ -1,13 +1,16 @@
-CC		= gcc
-CFLAGS	= -Werror -Wextra -Wall
-DEPS	= test.c verify.c
-OBJ		= test.o verify.o
+CFLAGS = -Wall -Wextra -Werror
 
-%.o: %.c $(DEPS)
-	$(CC) -c -o $@ $< $(CFLAGS)
-
-rush-02: $(OBJ)
-	$(CC) -o $@ $^ $(CFLAGS)
-
-fclean: $(OBJ) rush-02
-	rm -f $^
+NAME = rush-02
+SRC = ./
+HEADERS =  ./includes/ft.h
+all:
+	gcc $(SRC)*.c -o $(NAME) 
+push:
+	git add *.c *.h Makefile
+futureall: 
+	gcc $(CFLAGS) $(SRC)*.c -o $(NAME) 
+clean: 
+	rm -f $(SRC)*.o
+fclean: clean
+	rm -f $(NAME)
+re: fclean all
