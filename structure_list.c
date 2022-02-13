@@ -58,6 +58,7 @@ void ft_parse(char *file, pair **array)
 	int	i;
 	char buffer[30000];
 	int bytes_read;
+	int line_no = 0;
 	linestart = 0;
 	bytes_read = -2;
 	i = 0;
