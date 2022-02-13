@@ -13,6 +13,11 @@ typedef struct	pair{
 
 }				pair;
 
+char	*ones(char digit, pair **double_array);
+int		ft_strcmp(char *s1, char *s2);
+char	*tens(char digit, char teens, pair **double_array);
+char	*hundreds(char	digit, pair **double_array);
+char	*ft_strcat(char *dest, char *src);
 int		verify_line(char *str);
 int		ft_len(char *s);
 char	**line_modifier(char *str);

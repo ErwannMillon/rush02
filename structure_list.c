@@ -36,8 +36,8 @@ int		ft_add_to_struct(char *str, pair **array)
 	//printf("%s \n", tmp);
 	if (!(verify_line(tmp)))
 	{
-		printf("invalid string: %s \n", tmp);
-		return (0);
+		//printf("invalid string: %s \n", tmp);
+		//return (0);
 	}
 	//printf("%s\n", tmp);
 	list = line_modifier(tmp);
@@ -45,9 +45,13 @@ int		ft_add_to_struct(char *str, pair **array)
 	new.key = list[0];
 	new.value = list[1];
 	new.power = ft_len(list[0]) - 1;
-	printf("\nnew.key:%s new.value,: %s , arrapos: %d\n", new.key, new.value, array_pos);
+	//printf("\nnew.key:%s new.value,: %s , arrapos: %d\n", new.key, new.value, array_pos);
 	array[0][array_pos] = new;
 	array_pos++;
+	if (array[0][array_pos - 1].power == 36)
+	{
+		array[0][array_pos].power = -1;
+	}
 	return (1);
 }
 
@@ -58,7 +62,6 @@ void ft_parse(char *file, pair **array)
 	int	i;
 	char buffer[30000];
 	int bytes_read;
-	int line_no = 0;
 	linestart = 0;
 	bytes_read = -2;
 	i = 0;
