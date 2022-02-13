@@ -1,0 +1,21 @@
+
+#include "ft_includes.h"
+
+int main(void)
+{
+	char c[22] = "20    :     vin   ght";
+	pair *array = malloc(42 * sizeof(pair));
+	pair **reference = &array;
+	int i = 0;
+	int a = verify_line(c);
+		char **s = line_modifier(c);
+	ft_parse("refdict.txt", reference);
+	//printf("Key: %s, Value: %s, Power: %d \n", array[i]->key, array[i]->value, array[i]->power);
+
+	while (i < 42)
+	{
+		printf("Key: %s, Value: %s, Power: %d \n", array[i].key, array[i].value, array[i].power);
+		i++;
+	}
+	return(0);
+}
