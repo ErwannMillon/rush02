@@ -44,7 +44,7 @@ int		ft_add_to_struct(char *str, pair **array)
 	//printf("ADDSTRUCT: \nkey %s , val: %s \n\n", list[0], list[1]);
 	new.key = list[0];
 	new.value = list[1];
-	new.power = ft_len(list[0]) - 1;
+	new.power = ft_len(list[0]);
 	//printf("\nnew.key:%s new.value,: %s , arrapos: %d\n", new.key, new.value, array_pos);
 	array[0][array_pos] = new;
 	array_pos++;
